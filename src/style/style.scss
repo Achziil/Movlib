@@ -1,0 +1,234 @@
+$font: "Roboto", sans-serif;
+
+//Theme-Color
+$theme1: #fafaff;
+$theme2: #ff674d;
+$theme3: #27476e;
+
+//Base Preset
+$c1: #f8f9fa;
+$c2: #e9ecef;
+$c3: #dee2e6;
+$c4: #ced4da;
+$c5: #adb5bd;
+$c6: #6c757d;
+$c7: #495057;
+$c8: #343a40;
+$c9: #212529;
+
+$t1: 48px;
+$t2: 36px;
+$t3: 28px;
+$t4: 18px;
+$t5: 14px;
+$t6: 12px;
+
+$reg: 300;
+$med: 500;
+$big: 900;
+
+// baseline css
+* {
+   text-decoration: none;
+   box-sizing: border-box;
+}
+
+html,
+body {
+   margin: 0;
+   padding: 0;
+}
+
+body {
+   font-family: $font;
+   font-weight: $reg;
+   position: relative;
+   font-size: $t5;
+}
+
+nav {
+   ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+   }
+}
+
+.sidebar {
+   position: fixed;
+   top: 0;
+   left: 0;
+   height: 100vh;
+   width: 240px;
+   background-color: $theme3;
+   padding: 6px 0px;
+   #btn-menu {
+      position: absolute;
+      color: $theme1;
+      left: 90%;
+      top: 6px;
+      font-size: $t3;
+      height: 50px;
+      width: 50px;
+      text-align: center;
+      line-height: 50px;
+      transform: translateX(-50%);
+   }
+   .logo-content {
+      .logo {
+         color: $theme1;
+         display: flex;
+         height: 5rem;
+         width: 100%;
+         align-items: center;
+         padding: 10px;
+         a {
+            color: $theme1;
+         }
+         .logo-name {
+            font-size: $t3;
+            font-weight: $med;
+            letter-spacing: 0.5px;
+            a {
+               color: $theme1;
+            }
+         }
+         i {
+            font-size: $t1;
+            margin-right: 1vw;
+         }
+      }
+   }
+   ul {
+      margin-top: 20px;
+      li {
+         position: relative;
+         height: 50px;
+         // width: 100%;
+         margin: 0 15px;
+         list-style: none;
+         line-height: 50px;
+         input {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 0;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+            background-color: $theme1;
+            font-size: $t5;
+            color: $theme2;
+            z-index: -1;
+            padding-left: 40px;
+         }
+         .bx-search-alt-2 {
+            position: absolute;
+            font-size: $t3;
+            z-index: 2;
+            width: 100%;
+            padding: 5px;
+            color: $theme2;
+         }
+         a {
+            color: $theme1;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            transition: all 0.4s ease-in-out;
+            margin: 10px;
+            border-radius: 12px;
+            i {
+               height: 50px;
+               min-width: 4vh;
+               line-height: 50px;
+               text-align: center;
+            }
+         }
+         a:hover {
+            background: $theme1;
+            color: $theme2;
+         }
+      }
+   }
+}
+
+main {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   position: absolute;
+   height: 100%;
+   left: 240px;
+   .sectionTitle {
+      margin: 1vh 1vw;
+      font-weight: $big;
+      font-size: $t1;
+   }
+   hr {
+      max-width: 100%;
+      width: 100%;
+      height: 0.5vh;
+      background: linear-gradient(to left, $theme1, $theme2);
+      border-radius: 10px;
+      border: none;
+      margin-left: 15px;
+   }
+   .movie {
+      width: 300px;
+      margin: 1rem;
+      border-radius: 15px;
+      box-shadow: 12px 12px 13px 1px rgba(0, 0, 0, 0.29);
+      background-color: $theme2;
+      position: relative;
+      overflow: hidden;
+      img {
+         width: 100%;
+         border-top-left-radius: 15px;
+         border-top-right-radius: 15px;
+      }
+      .movie-info {
+         color: $theme1;
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         padding: 0.5rem 1rem 1rem;
+         letter-spacing: 0.5px;
+         h3 {
+            margin-top: 0;
+         }
+         span {
+            background-color: $theme3;
+            padding: 0.25rem 0.5rem;
+            border-radius: 5px;
+            font-weight: $big;
+         }
+         span.green {
+            color: rgb(0, 255, 21);
+         }
+         span.yellow {
+            color: rgb(255, 255, 0);
+         }
+         span.red {
+            color: rgb(255, 111, 111);
+         }
+      }
+      .overview {
+         position: absolute;
+         left: 0;
+         right: 0;
+         bottom: 0;
+         background-color: $theme1;
+         padding: 1rem;
+         max-height: 100%;
+         transform: translateY(101%);
+         transition: ease-in-out 0.3s;
+      }
+   }
+   .movie:hover {
+      .overview {
+         transform: translateY(0);
+      }
+   }
+}

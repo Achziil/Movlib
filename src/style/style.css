@@ -1,0 +1,250 @@
+* {
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  position: relative;
+  font-size: 14px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 240px;
+  background-color: #27476e;
+  padding: 6px 0px;
+}
+
+.sidebar #btn-menu {
+  position: absolute;
+  color: #fafaff;
+  left: 90%;
+  top: 6px;
+  font-size: 28px;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  line-height: 50px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.sidebar .logo-content .logo {
+  color: #fafaff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 5rem;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+}
+
+.sidebar .logo-content .logo a {
+  color: #fafaff;
+}
+
+.sidebar .logo-content .logo .logo-name {
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.sidebar .logo-content .logo .logo-name a {
+  color: #fafaff;
+}
+
+.sidebar .logo-content .logo i {
+  font-size: 48px;
+  margin-right: 1vw;
+}
+
+.sidebar ul {
+  margin-top: 20px;
+}
+
+.sidebar ul li {
+  position: relative;
+  height: 50px;
+  margin: 0 15px;
+  list-style: none;
+  line-height: 50px;
+}
+
+.sidebar ul li input {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background-color: #fafaff;
+  font-size: 14px;
+  color: #ff674d;
+  z-index: -1;
+  padding-left: 40px;
+}
+
+.sidebar ul li .bx-search-alt-2 {
+  position: absolute;
+  font-size: 28px;
+  z-index: 2;
+  width: 100%;
+  padding: 5px;
+  color: #ff674d;
+}
+
+.sidebar ul li a {
+  color: #fafaff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  margin: 10px;
+  border-radius: 12px;
+}
+
+.sidebar ul li a i {
+  height: 50px;
+  min-width: 4vh;
+  line-height: 50px;
+  text-align: center;
+}
+
+.sidebar ul li a:hover {
+  background: #fafaff;
+  color: #ff674d;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  height: 100%;
+  left: 240px;
+}
+
+main .sectionTitle {
+  margin: 1vh 1vw;
+  font-weight: 900;
+  font-size: 48px;
+}
+
+main hr {
+  max-width: 100%;
+  width: 100%;
+  height: 0.5vh;
+  background: -webkit-gradient(linear, right top, left top, from(#fafaff), to(#ff674d));
+  background: linear-gradient(to left, #fafaff, #ff674d);
+  border-radius: 10px;
+  border: none;
+  margin-left: 15px;
+}
+
+main .movie {
+  width: 300px;
+  margin: 1rem;
+  border-radius: 15px;
+  -webkit-box-shadow: 12px 12px 13px 1px rgba(0, 0, 0, 0.29);
+          box-shadow: 12px 12px 13px 1px rgba(0, 0, 0, 0.29);
+  background-color: #ff674d;
+  position: relative;
+  overflow: hidden;
+}
+
+main .movie img {
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+main .movie .movie-info {
+  color: #fafaff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0.5rem 1rem 1rem;
+  letter-spacing: 0.5px;
+}
+
+main .movie .movie-info h3 {
+  margin-top: 0;
+}
+
+main .movie .movie-info span {
+  background-color: #27476e;
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
+  font-weight: 900;
+}
+
+main .movie .movie-info span.green {
+  color: #00ff15;
+}
+
+main .movie .movie-info span.yellow {
+  color: yellow;
+}
+
+main .movie .movie-info span.red {
+  color: #ff6f6f;
+}
+
+main .movie .overview {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fafaff;
+  padding: 1rem;
+  max-height: 100%;
+  -webkit-transform: translateY(101%);
+          transform: translateY(101%);
+  -webkit-transition: ease-in-out 0.3s;
+  transition: ease-in-out 0.3s;
+}
+
+main .movie:hover .overview {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+/*# sourceMappingURL=style.css.map */
